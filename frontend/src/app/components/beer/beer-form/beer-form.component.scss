@@ -1,0 +1,21 @@
+h1{
+    font-size: 30px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto; /* Assurez-vous que le tableau est défilable sur les petits écrans */
+    padding: 50px 0;
+}
+
+.field-marque,
+.field-prix,
+.field-type {
+    padding: 0 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,64 @@
+<mat-card class="mat-elevation-z10">
+    <mat-card-title style="text-align: center">
+      <img id="logo" src="./assets/logo-beer.png"/>
+      <h1>CATALOGUE DE BIERE</h1>
+    </mat-card-title>
+
+    <div class="table-container" *ngIf="beers!.length != 0">
+      <table >
+        <thead>
+          <tr>
+            <th class="col-index">#</th>
+            <th class="col-id">Id</th>
+            <th class="col-marque">Marque</th>
+            <th class="col-type">Type</th>
+            <th class="col-prix">Prix</th>
+            <th class="col-actions">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let beer of beers; let i = index">
+            <td class="content-index">{{i+1}}</td>
+            <td class="content-id"><b>{{beer.id}}</b></td>
+            <td class="content-marque"><b>{{beer.marque}}</b></td>
+            <td class="content-type">{{beer.type}}</td>
+            <td class="content-prix">{{beer.price}}</td>
+            <td class="content-actions">
+              <span>
+                <mat-icon 
+                  class="icon-edit" 
+                  color="primary" 
+                  routerLink="/beer-form/{{beer.id}}">
+                  edit
+                </mat-icon>
+              </span>
+              <!-- <span>
+                <mat-icon 
+                  class="icon-detail" 
+                  routerLink="/beer-detail/{{beer.id}}">
+                  search
+                </mat-icon>
+              </span> -->
+              <span>
+                <mat-icon
+                  class="icon-delete" 
+                  color="warn" 
+                  (click)="onDeleteBeer(beer)">
+                  delete
+                </mat-icon>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="message" *ngIf="beers.length == 0">
+      <h4>Vous n'avez enregistré aucune bière</h4>
+      <button mat-raised-button color="primary" (click)="onCreateNewBeer()">
+        Ajouter une nouvelle bière
+      </button>
+    </div>
+    
+</mat-card>
+  

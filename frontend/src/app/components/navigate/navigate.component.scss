@@ -1,0 +1,28 @@
+.active-link {
+    background-color: #fafafa;
+    color: rgb(41, 40, 40);
+    text-transform: uppercase;
+    opacity: 1;
+  }
+  
+  .nav-connection {
+    text-transform: uppercase;
+  }
+  
+  .spacer-central {
+    flex: 1 1 auto;
+  }
+  
+  .spacer-left {
+    flex-basis: 50px;
+  }
+  
+  .nav-left > button {
+    margin: 0 2px 0 2px;
+  }
+  
+  .nav-left > button:hover {
+    background-color: #f6c101;
+    color: white
+  }
+  

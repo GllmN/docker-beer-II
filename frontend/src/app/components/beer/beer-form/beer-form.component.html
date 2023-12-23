@@ -1,0 +1,73 @@
+<mat-card class="mat-elevation-z10">
+    <mat-card-title style="text-align: center">
+      <h1>
+        ENREGISTRER UNE NOUVELLE BIERE
+      </h1>
+    </mat-card-title>
+  
+    <div class="form-container">
+      <form *ngIf="beerForm" [formGroup]="beerForm" (ngSubmit)="onSaveBeer(beer)">
+        
+        <div>
+          <mat-form-field class="field-marque" appearance="fill">
+            <mat-label>Marque</mat-label>
+            <input matInput type="text" id="marque" name="marque" class="form-control" formControlName="marque" required>
+            <mat-icon matSuffix>marque</mat-icon>
+          </mat-form-field>
+      
+          <mat-form-field class="field-prix" appearance="fill">
+            <mat-label>Prix</mat-label>
+            <input matInput type="number" id="prix" name="prix" class="form-control" formControlName="prix" required>
+            <mat-icon matSuffix>history_edu</mat-icon>
+          </mat-form-field>
+  
+          <mat-form-field class="field-type" appearance="fill">
+            <mat-label>Type de bière</mat-label>
+            <mat-select id="type" name="type" formControlName="type" required>
+              <mat-option *ngFor="let type of typeOptions" [value]="type">
+                {{ type }}
+              </mat-option>
+            </mat-select>
+            <mat-icon matSuffix>history_edu</mat-icon>
+          </mat-form-field>
+      
+          <!-- <mat-form-field class="example-chip-list" appearance="fill">
+            <mat-label>Liste de tags</mat-label>
+            <mat-chip-list selectable multiple #chipList formControlName="listTag" id="listTag">
+              <mat-chip color="primary" #chip="matChip" *ngFor="let tag of tags" (removed)="deleteTag(tag)">
+                {{tag}}
+                <button matChipRemove>
+                  <mat-icon>cancel</mat-icon>
+                </button>
+              </mat-chip>
+              <input placeholder="Ajouter un tag..."
+                    [matChipInputFor]="chipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                    [matChipInputAddOnBlur]="addOnBlur"
+                    (matChipInputTokenEnd)="addTag($event)">
+            </mat-chip-list>
+          </mat-form-field> -->
+        </div>
+       
+        <div class="buttons">
+          <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          *ngIf="this.isAddBeer == true"
+          [disabled]="beerForm.invalid">Ajouter</button>
+    
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          *ngIf="this.isAddBeer == false"
+          [disabled]="beerForm.invalid">Modifier</button>
+        </div>
+    
+        
+      </form>
+    </div>
+   
+</mat-card>
+  

@@ -1,0 +1,97 @@
+.card-container {
+    max-width: 100%;
+    margin: auto;
+}
+  
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.table-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto; /* Assurez-vous que le tableau est défilable sur les petits écrans */
+    padding-bottom: 50px;
+}
+
+table {
+    width: 1000px;
+}
+
+thead {
+    background-color: rgb(236, 237, 240);
+}
+
+.col-index {
+    width: 5%;
+}
+
+.col-id {
+    width: 10%;
+}
+
+.col-marque {
+    width: 25%;
+}
+
+.col-type {
+    width: 25%;
+}
+
+.col-prix {
+    width: 15%;
+}
+
+.col-actions {
+    width: 10%;
+    text-align: center;
+}
+
+.content-index,
+.content-id,
+.content-marque, 
+.content-type,
+.content-type,
+.content-prix,
+.content-actions {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.icon-edit,
+.icon-detail,
+.icon-delete {
+    padding: 0px 10px;
+}
+
+@media (min-width: 768px) {
+    .table-container {
+        width: 100%;
+    }
+    .col-id,
+    .col-marque,
+    .col-type,
+    .col-prix,
+    .col-actions {
+        width: auto; /* ou une largeur spécifique plus petite */
+        min-width: 50px; /* pour s'assurer que le contenu a un minimum de place */
+    }
+}
+
+.message{
+    text-align: center;
+    margin: 20px 0;
+}
+
+#logo{
+    width: 200px;
+}
+
+@media (max-width: 600px) {
+    .actions mat-icon {
+        padding: 0 4px; /* Réduire l'espacement sur les petits écrans */
+    }
+}
