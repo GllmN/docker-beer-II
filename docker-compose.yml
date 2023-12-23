@@ -1,24 +1,37 @@
 version: '3.8'
 services:
-  db:
-    image: postgres
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    environment:
-      POSTGRES_DB: beer_catalogue
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
   backend:
     build: ./backend
     ports:
       - "3000:3000"
+    env_file:
+      - ./backend/.env
+    environment:
+      - DB_HOST=postgres
+      - DB_PORT=${DB_PORT}
+      - DB_USER=${DB_USERNAME}
+      - DB_PASS=${DB_PASSWORD}
+      - DB_NAME=${DB_DATABASE}
     depends_on:
-      - db
+      - postgres
+
   frontend:
     build: ./frontend
     ports:
-      - "4200:4200"
+      - "4200:80"
     depends_on:
       - backend
+
+  postgres:
+    image: postgres:13
+    ports:
+      - "${DB_PORT}:5432"
+    environment:
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_DATABASE}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
 volumes:
   pgdata:
