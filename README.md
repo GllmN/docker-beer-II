@@ -2,41 +2,58 @@
 
 ## Introduction
 
-OctoberBeer est une application moderne conçue pour les amateurs et les brasseurs de bière qui souhaitent suivre et gérer leur sélection de bières. Ce projet fournit une simple intuitive pour ajouter, modifier, filtrer et supprimer des bières de leur catalogue, avec des informations détaillées comme le type, la marque et le prix.
+OctoberBeer is an application designed for beer enthusiasts and brewers, facilitating the management of a beer catalogue. Developed with Angular and Node.js, it offers a basic user interface for adding, modifying, and managing beers. It's poised for further evolution
 
-Développée avec Angular pour le front-end et Node.js pour le back-end, cette application offre une expérience utilisateur fluide et est optimisée pour les performances. Que vous gériez une petite collection personnelle ou un inventaire de bar complet, OctoberBeer est l'outil idéal pour garder une trace de votre stock de bières.
+![Alt text](image.png)
 
-Ce projet a été créé pour répondre au besoin des gestionnaires de bars et restaurants de maintenir facilement à jour leur offre de bières, ainsi que pour les collectionneurs cherchant une solution numérique à la gestion de leur collection.
+## Prerequisites
 
-Actuellement en phase de développement, OctoberBeer est déjà fonctionnel avec une base de données PostgreSQL, prêt pour le déploiement en production.
+Operating Systems: Windows, macOS, Linux.
+Software: Node.js (v14+), Docker, PostgreSQL.
+Knowledge: Basics in Angular, Node.js, Docker, and PostgreSQL.
 
-![Aperçu de l'application OctoberBeer](TODO)
+## Environment Setup
 
-## Prérequis
-
-## Configuration de l'environnement
+Node.js and NPM: Install Node.js and npm from nodejs.org.
+Docker: Download Docker from docker.com.
+PostgreSQL Database: Create a PostgreSQL database named `beer_catalogue`.
 
 ## Installation
 
+Repository Cloning: `git clone https://github.com/your-repo/docker-beer-II.git.`
+Dependencies Installation: Run `npm install` in the `/backend` and `/frontend ` directories.
+
 ## Démarrage rapide
 
-Pour démarrer votre application en production :
+Production :
 ```
 npm run build
 npm run start 
 ```
 
-Pour démarrer votre application en développement :
+Development :
 ```
 npm run dev
 ```
 
-## Utilisation
+## Usage
+
+User Interface: Navigate through the application to manage your beer collection.
+API Endpoints: Use API endpoints to interact with the database.
 
 ## Tests
 
+Running Tests: Launch `npm test` in the `/backend` folder to run tests.
+
 ## Déploiement
+
+Docker : Utilisez `docker-compose up --build` pour déployer l'application en utilisant Docker.
 
 ## Contribution
 
+Guidelines: Contributions are welcome. Please submit pull requests for any modifications.
+Pull Requests: Ensure that tests pass and document any new features.
+
 ## Licence
+
+The project is distributed under the ISC license.
