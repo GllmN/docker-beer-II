@@ -80,7 +80,7 @@ services:
 
 Ensure never to include sensitive values directly in configuration files or source code, especially for public repositories.
 
-## Démarrage rapide
+## Quick Start
 
 Production :
 ``` bash
@@ -102,9 +102,9 @@ API Endpoints: Use API endpoints to interact with the database.
 
 Running Tests: Launch `npm test` in the `/backend` folder to run tests.
 
-## Déploiement
+## Deployment
 
-Docker : Utilisez `docker-compose up --build` pour déployer l'application en utilisant Docker.
+Docker: Use `docker-compose up --build` to deploy the application using Docker.
 
 ## Contribution
 
