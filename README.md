@@ -29,9 +29,10 @@ Flexible configuration of the application is achieved through the use of environ
 ### Root .env File
 At the root of the project, create a `.env` file for configuring the database used by Docker Compose:
 
-POSTGRES_DB: The name of the PostgreSQL database.
-POSTGRES_USER: The PostgreSQL database user.
-POSTGRES_PASSWORD: The password for the PostgreSQL database.
+`POSTGRES_DB`: The name of the PostgreSQL database.
+`POSTGRES_USER`: The PostgreSQL database user.
+`POSTGRES_PASSWORD`: The password for the PostgreSQL database.
+
 Example:
 
 ``` dotenv
