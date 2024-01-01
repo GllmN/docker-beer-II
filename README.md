@@ -34,8 +34,7 @@ POSTGRES_USER: The PostgreSQL database user.
 POSTGRES_PASSWORD: The password for the PostgreSQL database.
 Example:
 
-dotenv
-```
+``` dotenv
 POSTGRES_DB=beer_catalogue
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=mySecurePassword
@@ -49,10 +48,9 @@ In the /backend folder, create another .env file with the following variables:
 `DB_USERNAME`: Username for the database.
 `DB_PASSWORD`: Password for the database.
 `DB_DATABASE`: Name of the database.
-Example:
 
-dotenv
-```
+Example:
+``` dotenv
 DB_HOST=localhost
 DB_PORT=5432
 DB_USERNAME=postgres
@@ -67,9 +65,7 @@ Environment variables for the frontend can be set in the `environment.ts` and `e
 In the `docker-compose.yml` file, use environment variables to configure services, such as database connection information for the backend service and server configurations for the frontend service.
 
 Example:
-
-yaml
-```
+``` yaml
 services:
   backend:
     environment:
