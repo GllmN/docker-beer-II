@@ -29,9 +29,9 @@ Flexible configuration of the application is achieved through the use of environ
 ### Root .env File
 At the root of the project, create a `.env` file for configuring the database used by Docker Compose:
 
-`POSTGRES_DB`: The name of the PostgreSQL database.
-`POSTGRES_USER`: The PostgreSQL database user.
-`POSTGRES_PASSWORD`: The password for the PostgreSQL database.
+- `POSTGRES_DB`: The name of the PostgreSQL database.
+- `POSTGRES_USER`: The PostgreSQL database user.
+- `POSTGRES_PASSWORD`: The password for the PostgreSQL database.
 
 Example:
 
@@ -44,11 +44,11 @@ POSTGRES_PASSWORD=mySecurePassword
 ### Backend
 In the /backend folder, create another .env file with the following variables:
 
-`DB_HOST`: Host of the PostgreSQL database.
-`DB_PORT`: Port of the PostgreSQL database.
-`DB_USERNAME`: Username for the database.
-`DB_PASSWORD`: Password for the database.
-`DB_DATABASE`: Name of the database.
+- `DB_HOST`: Host of the PostgreSQL database.
+- `DB_PORT`: Port of the PostgreSQL database.
+- `DB_USERNAME`: Username for the database.
+- `DB_PASSWORD`: Password for the database.
+- `DB_DATABASE`: Name of the database.
 
 Example:
 ``` dotenv
