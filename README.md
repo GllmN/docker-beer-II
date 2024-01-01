@@ -82,13 +82,13 @@ Ensure never to include sensitive values directly in configuration files or sour
 ## Démarrage rapide
 
 Production :
-```
+``` bash
 npm run build
 npm run start 
 ```
 
 Development :
-```
+``` bash
 npm run dev
 ```
 
